@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+.about-images img {
+  max-width: 250px;
+  margin: 5px;
+  box-shadow: 0 0 5px grey;
+}
+
+li .cs-link a {
+  text-decoration: underline;
+}
+
+.li-small li {
+  font-size: 18px;
+}
+
+ol li h3 {
+  color: black;
+}
+
+.contact-info p {
+  margin: 0;
+}

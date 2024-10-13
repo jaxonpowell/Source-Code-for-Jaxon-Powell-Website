@@ -1,0 +1,51 @@
+.tableu div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  margin-bottom: 30px;
+  margin-left: 10vw;
+}
+
+div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 10px auto;
+  margin-top: 15px;
+  padding: 100;
+  max-width: 80rem;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+
+li {
+  margin: 0 auto;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px auto;
+}
+
+p {
+  margin-left: 10vw;
+}
+
+div h2 {
+  margin-left: 5vw;
+}
