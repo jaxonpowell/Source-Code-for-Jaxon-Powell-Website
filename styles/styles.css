@@ -9014,6 +9014,20 @@ blockquote {
   color: #6c757d;
 }
 
+.form-floating input,
+.form-floating textarea {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+.form-floating input:focus,
+.form-floating textarea:focus {
+  box-shadow: none;
+}
+.form-floating label {
+  color: #6c757d;
+}
+
 #mainNav {
   position: absolute;
   top: 0;
