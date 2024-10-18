@@ -4,7 +4,7 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 12pt;
-  background-image: url("background1.png");
+  background-color: rgb(255, 247, 241);
   background-size: cover;
   background-position: center;
   margin: 20px;
@@ -26,8 +26,9 @@ header {
   display: flex;
   justify-content: space-between; /* Distribute items with space between */
   align-items: center;
-  border: solid grey;
+  border: solid rgb(135, 199, 236);
   margin-right: 5%;
+  background-color: rgb(135, 199, 236);
   /* Remove any fixed width or max-width properties */
 }
 
@@ -77,11 +78,13 @@ nav {
 }
 
 .menu-items {
-  padding-left: 2vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
   padding-right: 2vw;
-  margin: auto;
+  margin: 0;
   color: white;
 }
+
 .nav-items > a {
   color: white;
 }
@@ -109,7 +112,7 @@ footer {
 }
 
 .section-image {
-  display: none;
+  /*display: none;*/
 }
 
 #interests {
@@ -122,9 +125,20 @@ p {
   margin-bottom: 6px;
 }
 
-img {
-  width: 500px;
-  height: 500px;
+picture > img {
+  width: 100%;
+  border: 5px solid black;
+  box-shadow: 0px 0px 15px 1px rgb(82, 82, 82);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  margin-right: 5%;
+  margin-left: 15px;
+}
+
+figure > img {
+  width: 20vw;
+  height: 20vw;
   border: 5px solid black;
   box-shadow: 0px 0px 15px 1px rgb(82, 82, 82);
   margin-top: 10px;
@@ -303,6 +317,7 @@ Javascript Modal Styling
 #thumbnail {
   cursor: pointer;
   transition: transform 0.3s;
+  float: right;
 }
 
 #thumbnail:hover {
@@ -371,4 +386,176 @@ Javascript Modal Styling
   height: auto;
   display: flex;
   margin: auto;
+}
+
+/* CSS for when website needs to be seen on a phone screen */
+/* 
+*
+*
+*
+Media Query for Phone and Tablet
+*
+*
+*
+*/
+
+@media (max-width: 650px) {
+  /* Hamburger Menu Styling */
+  #hamburger-icon {
+    /* Style the hamburger icon */
+    display: block; /* Show the hamburger icon */
+    position: relative;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's on top */
+  }
+
+  /* Close button styling */
+  .close-button-nav {
+    /* Adjust close button for smaller screens */
+    position: absolute;
+    top: 10px; /* Adjusted position */
+    right: 15px; /* Adjusted position */
+    color: #000000; /* Changed color for visibility */
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Close button styling */
+  .close-button-nav:hover {
+    /* Adjust hover effect for close button */
+    color: #5e0000;
+  }
+
+  /* The "bars" that are inside of the hamburger menu */
+  .bar {
+    /* Style each bar in the icon */
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* When the menu is clicked on, the bars will change to an X shape */
+  #hamburger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger-icon.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  #hamburger-icon.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Styling for the NAV tag */
+  nav {
+    /* Adjust nav for smaller screens */
+    display: none; /* Initially hide the navigation menu */
+    position: fixed; /* Make it a fixed overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align to the left */
+    z-index: 2; /* Ensure it's on top */
+  }
+
+  /* Styling for the NAV list */
+  #nav-list {
+    /* Adjust nav list for smaller screens */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%;
+    padding: 0;
+    margin-top: 70px;
+  }
+
+  /* Styling for the NAV items */
+  .nav-items {
+    /* Adjust nav items for smaller screens */
+    border: 1px solid white;
+    background-color: rgb(135, 199, 236);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  /* Styling for the links inside the NAV */
+  .nav-items > a {
+    /* Adjust nav links for smaller screens */
+    font-size: 16px;
+  }
+
+  /* Styling for the header */
+  header {
+    /* Adjust header for smaller screens */
+    position: relative; /* To position the close button */
+    flex-wrap: wrap; /* Allow wrapping */
+    height: auto;
+  }
+
+  /* Styling for the logo inside the header */
+  .navbar-brand {
+    /* Adjust logo for smaller screens */
+    width: 100%; /* Take full width */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Add some space below */
+  }
+
+  /* Styling for the main content */
+  main {
+    /* Adjust main content for smaller screens */
+    grid-area: main;
+    display: flex;
+    flex-direction: column; /* Make content flow vertically */
+  }
+
+  /* Styling for the section containers */
+  .container {
+    /* Adjust containers for smaller screens */
+    display: flex; /* Show the containers */
+    flex-direction: column; /* Make content inside flow vertically */
+    width: 100%; /* Take full width */
+    margin-bottom: 20px; /* Add space between containers */
+  }
+
+  /* Styling for the section containers */
+  .section-image {
+    /* Adjust containers for smaller screens */
+    display: flex; /* Show the containers */
+    flex-direction: column; /* Make content inside flow vertically */
+    width: 100%; /* Take full width */
+    margin-bottom: 20px; /* Add space between containers */
+  }
+
+  /* Styling for the thumbnail image */
+  #thumbnail {
+    /* Adjust thumbnail for smaller screens */
+    float: none; /* Remove float */
+    width: 90%; /* Make it smaller */
+    margin: 10px auto; /* Center the image */
+  }
+
+  /* Styling for the picture element */
+  picture > img {
+    /* Adjust picture for smaller screens */
+    width: 90%; /* Make it smaller */
+    margin: 10px auto; /* Center the image */
+  }
+
+  /* Styling for the table */
+  table {
+    /* Adjust table for smaller screens */
+    font-size: 10px; /* Reduce font size */
+  }
 }

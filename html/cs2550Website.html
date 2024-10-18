@@ -24,26 +24,40 @@
         <li class="nav-items"><a href="../html/cs2550Website.html">CS2550</a></li>
       </ul>
     </nav>
+    <!-- HTML code below for collapsing menu when on mobile -->
+    <div id="hamburger-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <!-- HTML code above for collapsing menu when on mobile -->
   </header>
 
   <main>
+    <figure id="thumbnail">
+      <img src="../images/500by500 pic.jpeg" alt="Thumbnail Image" />
+      <figcaption>Caption: Profile Picture of Jaxon Powell</figcaption>
+    </figure>
     <section>
       <h3>Welcome to my Website!</h3>
     </section>
-    <section>
+    <section id="menu">
       <h3>Page Menu</h3>
       <ul id="menu-list">
-        <li class="menu-items"></li><a href="#personal-info">Personal Info</a>
-        <li class="menu-items"></li><a href="#favorite-books">My five favorite books</a>
-        <li class="menu-items"></li><a href="#skiing-haiku">Skiing Haiku</a>
-        <li class="menu-items"></li><a href="#interests">My personal interests</a>
-        <li class="menu-items"></li><a href="#schedule">Schedule</a>
+        <li class="menu-items"><a href="#personal-info">Personal Info</a></li>
+        <li class="menu-items"><a href="#favorite-book">My five favorite books</a></li>
+        <li class="menu-items"><a href="#skiing-haiku">Skiing Haiku</a></li>
+        <li class="menu-items"><a href="#interests">My personal interests</a></li>
+        <li class="menu-items"><a href="#schedule">Schedule</a></li>
       </ul>
     </section>
 
     <section class="section-image">
-      <!-- Thumbnail Image -->
-      <img id="thumbnail" src="../images/500by500 pic.jpeg" alt="Thumbnail Image" />
+      <!-- Thumbnail Image 
+      <figure id="thumbnail">
+        <img src="../images/500by500 pic.jpeg" alt="Thumbnail Image" />
+        <figcaption>Caption: Profile Picture of Jaxon Powell</figcaption>
+      </figure> -->
 
       <!-- Modal Structure -->
       <div id="modal" class="modal">
@@ -137,6 +151,16 @@
         Me and my wife are taking Mac on a weekend camping trip for the long
         weekend and we're super excited for that.
       </p>
+      <picture>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fbqHK8i-HdA?si=vljb6thtLvvGia35"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <source media="(max-width: 600px)" srcset="../images/home-bg.jpg">
+        <source media="(min-width: 601px)" srcset="../images/mountain-sunrise.jpg">
+        <img src="../images/mountain-sunrise.jpg" alt="A beautiful mountain sunrise">
+      </picture>
+
     </section>
 
     <section class="container" id="schedule">
@@ -248,6 +272,7 @@
       </table>
     </section>
   </main>
+  <script src="../js/cs2550Website.js"></script>
   <sidebar>
 
   </sidebar>
