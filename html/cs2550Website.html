@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="container-row">
+  <header>
     <a class="navbar-brand" href="../index.html">JT Incorporated</a>
     <nav>
       <ul id="nav-list">
@@ -27,27 +27,41 @@
   </header>
 
   <main>
-    <h3 class="container">Welcome to my Website!</h3>
+    <section>
+      <h3>Welcome to my Website!</h3>
+    </section>
+    <section>
+      <h3>Page Menu</h3>
+      <ul id="menu-list">
+        <li class="menu-items"></li><a href="#personal-info">Personal Info</a>
+        <li class="menu-items"></li><a href="#favorite-books">My five favorite books</a>
+        <li class="menu-items"></li><a href="#skiing-haiku">Skiing Haiku</a>
+        <li class="menu-items"></li><a href="#interests">My personal interests</a>
+        <li class="menu-items"></li><a href="#schedule">Schedule</a>
+      </ul>
+    </section>
 
-    <!-- Thumbnail Image -->
-    <img id="thumbnail" src="../images/500by500 pic.jpeg" alt="Thumbnail Image" />
+    <section class="section-image">
+      <!-- Thumbnail Image -->
+      <img id="thumbnail" src="../images/500by500 pic.jpeg" alt="Thumbnail Image" />
 
-    <!-- Modal Structure -->
-    <div id="modal" class="modal">
-      <!-- Dark background -->
-      <div class="modal-overlay"></div>
+      <!-- Modal Structure -->
+      <div id="modal" class="modal">
+        <!-- Dark background -->
+        <div class="modal-overlay"></div>
 
-      <!-- Modal Content -->
-      <div class="modal-content">
-        <!-- Close Button -->
-        <span class="close-button">&times;</span>
-        <!-- Enlarged Image -->
-        <img id="modal-image" src="../images/500by500 pic.jpeg" alt="Modal Image" />
+        <!-- Modal Content -->
+        <div class="modal-content">
+          <!-- Close Button -->
+          <span class="close-button">&times;</span>
+          <!-- Enlarged Image -->
+          <img id="modal-image" src="../images/500by500 pic.jpeg" alt="Modal Image" />
+        </div>
       </div>
-    </div>
-    <script src="../js/cs2550Website.js"></script>
+      <script src="../js/cs2550Website.js"></script>
+    </section>
 
-    <section class="container">
+    <section class="container" id="personal-info">
       <h2>Personal Info</h2>
       <ul>
         <li><b>Major:</b> Computer Science</li>
@@ -60,7 +74,7 @@
       </ul>
     </section>
 
-    <section class="container">
+    <section class="container" id="favorite-book">
       <h2>My five favorite books</h2>
       <ol>
         <li>
@@ -88,7 +102,7 @@
       </ol>
     </section>
 
-    <section class="container">
+    <section class="container" id="skiing-haiku">
       <h2>Skiing Haiku</h2>
       <p>
         I love skking and am looking forward to skiing this winter. So my haiku is
@@ -125,7 +139,7 @@
       </p>
     </section>
 
-    <section class="container">
+    <section class="container" id="schedule">
       <h2>Class Schedule</h2>
       <p>
         Note: All of my classes are online, so the schedule will be for when I
