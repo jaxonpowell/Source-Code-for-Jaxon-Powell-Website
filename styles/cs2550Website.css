@@ -7,7 +7,7 @@ body {
   background-color: rgb(255, 247, 241);
   background-size: cover;
   background-position: center;
-  margin: 20px;
+  margin: 25px;
 
   /* CSS Grid for overall layout */
   display: grid;
@@ -27,7 +27,6 @@ header {
   justify-content: space-between; /* Distribute items with space between */
   align-items: center;
   border: solid rgb(135, 199, 236);
-  margin-right: 5%;
   background-color: rgb(135, 199, 236);
   /* Remove any fixed width or max-width properties */
 }
@@ -58,35 +57,99 @@ nav {
   /* Remove any fixed width or max-width properties */
 }
 
+#menu {
+  background-image: linear-gradient(
+    to left,
+    rgb(32, 151, 198),
+    rgb(1, 106, 150)
+  ); /* Add a background image */
+  border: 2px solid black; /* Add a border */
+  margin-top: 15px; /* Add a margin to the top */
+  margin-bottom: 15px; /* Add a margin to the bottom */
+  max-height: fit-content;
+}
+
+#menu > h3 {
+  color: white;
+  justify-content: center;
+  font-size: x-large;
+}
+
 #menu-list {
   display: flex;
   flex-wrap: nowrap; /* Keep items on the same line */
-  justify-content: flex-start;
   justify-items: auto;
   list-style-type: none;
   margin-left: 0px;
   padding-left: 0;
   flex-direction: column;
-  /* Remove any fixed width or max-width properties */
+  padding-left: 0; /* Add left padding to the list */
+}
+
+#menu-pic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#main {
+  max-width: 58vw;
+}
+
+#main > h4 {
+  font-weight: bold;
+  color: rgb(27, 96, 152);
+  font-size: 1.5em;
+}
+
+#main > p {
+  font-size: 1em;
 }
 
 .nav-items {
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
   margin: auto;
-  color: white;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: rgb(8, 141, 185);
 }
 
 .menu-items {
-  padding-top: 0.2vh;
-  padding-bottom: 0.2vh;
-  padding-right: 2vw;
-  margin: 0;
+  display: flex;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-right: 0.8vw;
+  padding-left: 0.8vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
   color: white;
+  border-bottom: 2px solid black; /* Add a border to the bottom of each menu item */
+  justify-content: flex-start;
+}
+
+.menu-items:first-child {
+  border-top: 2px solid black; /* Remove the border from the last menu item */
+}
+
+.menu-items:last-child {
+  border-bottom: none; /* Remove the border from the last menu item */
+  padding-bottom: 0%;
+}
+
+.menu-items > a {
+  color: white;
+  font-size: 1;
 }
 
 .nav-items > a {
   color: white;
+}
+
+#hamburger-icon {
+  /* Style the hamburger icon */
+  display: none;
 }
 
 /* Main content styles */
@@ -111,16 +174,29 @@ footer {
   align-items: flex-start;
 }
 
+.container > h2 {
+  background-image: linear-gradient(
+    to left,
+    rgb(32, 151, 198),
+    rgb(1, 106, 150)
+  ); /* Add a background image */
+  padding: 1vw;
+}
+
 .section-image {
   /*display: none;*/
 }
 
 #interests {
-  padding-right: 2%;
+  padding-right: 0%;
+}
+
+#interests > p {
+  font-size: medium;
 }
 
 p {
-  text-indent: 16px;
+  text-indent: 12px;
   margin-top: 6px;
   margin-bottom: 6px;
 }
@@ -132,20 +208,19 @@ picture > img {
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
-  margin-right: 5%;
-  margin-left: 15px;
 }
 
 figure > img {
+  display: flex;
   width: 20vw;
   height: 20vw;
   border: 5px solid black;
   box-shadow: 0px 0px 15px 1px rgb(82, 82, 82);
   margin-top: 10px;
   margin-bottom: 10px;
-  float: right;
   margin-right: 5%;
   margin-left: 15px;
+  max-width: 25vw;
 }
 
 blockquote {
@@ -230,7 +305,7 @@ a:hover {
 
 table {
   table-layout: fixed;
-  width: 95%;
+  width: 100%;
   margin-bottom: 20px;
   background-image: linear-gradient(
     to left,
@@ -301,6 +376,37 @@ td.workout {
 
 colgroup col {
   width: 16.66%;
+}
+
+footer {
+  background-color: #848484;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: small;
 }
 
 /* 
@@ -380,6 +486,10 @@ Javascript Modal Styling
   color: #5e0000;
 }
 
+.close-button-nav {
+  display: none;
+}
+
 /* Enlarged Image Styling */
 #modal-image {
   width: 100%;
@@ -417,10 +527,11 @@ Media Query for Phone and Tablet
     position: absolute;
     top: 10px; /* Adjusted position */
     right: 15px; /* Adjusted position */
-    color: #000000; /* Changed color for visibility */
+    color: #ca1010; /* Changed color for visibility */
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    display: none; /* Initially hide the close button */
   }
 
   /* Close button styling */
@@ -518,6 +629,7 @@ Media Query for Phone and Tablet
     grid-area: main;
     display: flex;
     flex-direction: column; /* Make content flow vertically */
+    width: 100%;
   }
 
   /* Styling for the section containers */
@@ -557,5 +669,20 @@ Media Query for Phone and Tablet
   table {
     /* Adjust table for smaller screens */
     font-size: 10px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 1495px) {
+  #menu-pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #main {
+    width: 100vw;
+    max-width: 95vw;
+    min-width: 550px;
   }
 }
