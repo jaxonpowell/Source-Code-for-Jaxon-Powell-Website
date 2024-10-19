@@ -220,7 +220,8 @@ figure > img {
   margin-bottom: 10px;
   margin-right: 5%;
   margin-left: 15px;
-  max-width: 25vw;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 blockquote {
@@ -507,7 +508,7 @@ Javascript Modal Styling
 /* Start of lights on and off switch on the contact form css */
 .bg {
   background-color: rgb(0, 0, 0);
-  height: 100vw;
+  height: 1000rem;
   left: 0;
   position: fixed;
   top: 0;
