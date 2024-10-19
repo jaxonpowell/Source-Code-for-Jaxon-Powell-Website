@@ -102,6 +102,32 @@
       <script src="../js/cs2550Website.js"></script>
     </section>
 
+    <sidebar>
+      <input type="checkbox" id="toggle" /> <label class="lightSwitch" for="toggle"><span
+          class="screen-reader-text">Lights
+          On</span></label>
+      <div class="bg"></div>
+      <h2 class="lightSwitchText">Light Switch</h2>
+
+      <script>
+        // EXPLANATION:
+        //   line 1 - wait until the DOM Content is loaded before doing anything. If you add this at the end of <body>, you don't need this necessarily, but I figure it can't hurt. 
+        //   line 2 - find .menu-icon in the document (the current HTML page) and give it something to do when it is clicked 
+        //   line 3 - when .menu-icon is clicked, find .main-menu and toggle the .menu-show class -- if .main-menu has a .menu-show class, remove it, else add it */
+
+        window.addEventListener("DOMContentLoaded", () => {
+          document.querySelector(".menu-icon").addEventListener("click", () => {
+            document.querySelector(".main-menu").classList.toggle("menu-show");
+          });
+        });
+      </script>
+
+      <!-- font awesome script -->
+      <script src="https://kit.fontawesome.com/b53319b3c6.js" crossorigin="anonymous"></script>
+      <i class="fa-regular fa-clock"></i>
+
+    </sidebar>
+
     <section class="container" id="personal-info">
       <h2>Personal Info</h2>
       <ul>
@@ -300,9 +326,6 @@
     </section>
   </main>
   <script src="../js/cs2550Website.js"></script>
-  <sidebar>
-
-  </sidebar>
   <footer>
     <p>&copy; 2024 - JT Incorporated</p>
     <ul>
