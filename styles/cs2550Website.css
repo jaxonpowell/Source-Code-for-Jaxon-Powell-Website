@@ -14,7 +14,7 @@
    The CSS file is in a sub folder. Made the site Mobile
    responsive.*/
 
-   
+
 /* Main Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -774,7 +774,7 @@ Media Query for Phone and Tablet
   }
 }
 
-@media (max-width: 1495px) {
+@media (max-width: 1600px) {
   #menu-pic {
     display: flex;
     flex-direction: column;
